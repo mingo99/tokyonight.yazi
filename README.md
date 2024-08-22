@@ -3,7 +3,7 @@
 </div>
 
 <h3 align="center">
- Example Flavor for <a href="https://github.com/sxyazi/yazi">Yazi</a>
+ Tokyonight Flavor for <a href="https://github.com/sxyazi/yazi">Yazi</a>
 </h3>
 
 ## 👀 Preview
@@ -12,21 +12,17 @@
 
 ## 🎨 Installation
 
-<!-- Please replace "username/example" with your repository name. -->
-
 ```bash
-ya pack -a username/example
+ya pack -a mingo99/tokyonight
 ```
 
 ## ⚙️ Usage
 
 Add the these lines to your `theme.toml` configuration file to use it:
 
-<!-- Please replace "example" with your flavor name. -->
-
 ```toml
 [flavor]
-use = "example"
+use = "tokyonight.yazi"
 ```
 
 ## 📜 License
