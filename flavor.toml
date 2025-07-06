@@ -1,49 +1,41 @@
-# A TOML linter such as https://taplo.tamasfe.dev/ can use this schema to validate your config.
-# If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
-"$schema" = "https://yazi-rs.github.io/schemas/theme.json"
-
-# vim:fileencoding=utf-8:foldmethod=marke# vim:fileencoding=utf-8:foldmethod=marker
+# vim:fileencoding=utf-8:foldmethod=marker
 
 # : Manager {{{
 
 [mgr]
-cwd = { fg = "#87afff" }
+cwd = { fg = "#7aa2f7" }
 
 # Hovered
-hovered = { fg = "#262626", bg = "#87afff" }
-preview_hovered = { underline = false }
+hovered         = { reversed = true }
+preview_hovered = { underline = true }
 
 # Find
-find_keyword = { fg = "yellow", italic = true }
-find_position = { fg = "magenta", bg = "reset", italic = true }
+find_keyword  = { fg = "#f7768e", bold = true, italic = true, underline = true }
+find_position = { fg = "#bb9af7", bg = "reset", bold = true, italic = true }
 
 # Marker
-marker_selected = { fg = "#afd75f", bg = "#afd75f" }
-marker_copied = { fg = "#d7af5f", bg = "#d7af5f" }
-marker_cut = { fg = "#ff8787", bg = "#ff8787" }
-marker_marked = { fg = "lightcyan", bg = "lightcyan" }
-
+marker_copied   = { fg = "#9ece6a", bg = "#9ece6a" }
+marker_cut      = { fg = "#e0af68", bg = "#f7768e" }
+marker_marked   = { fg = "#7aa2f7", bg = "#7dcfff" }
+marker_selected = { fg = "#e0af68", bg = "#e0af68" }
 
 # Count
-count_copied = { fg = "white", bg = "green" }
-count_cut = { fg = "white", bg = "red" }
-count_selected = { fg = "white", bg = "yellow" }
+count_copied   = { fg = "#1a1b26", bg = "#9ece6a" }
+count_cut      = { fg = "#1a1b26", bg = "#e0af68" }
+count_selected = { fg = "#1a1b26", bg = "#7aa2f7" }
 
 # Border
 border_symbol = "│"
-border_style = { fg = "#afd7ff" }
-
-# Highlighting
-syntect_theme = ""
+border_style  = { fg = "#afd7ff" }
 
 # : }}}
+
 
 # : Tabs {{{
 
 [tabs]
-active = { fg = "#262626", bg = "#87afff", bold = true }
-inactive = { fg = "white", bg = "#4e4e4e" }
-tab_width = 1
+active   = { fg = "#292e42", bg = "#7aa2f7", bold = true }
+inactive = { fg = "#7aa2f7", bg = "#292e42" }
 
 # : }}}
 
@@ -52,46 +44,48 @@ tab_width = 1
 
 [mode]
 
-normal_main = { fg = "#262626", bg = "#afd7ff", bold = true }
+normal_main = { fg = "#292e42", bg = "#7aa2f7", bold = true }
 normal_alt  = { fg = "#7aa2f7", bg = "#292e42" }
 
 # Select mode
-select_main = { fg = "#262626", bg = "#afd75f", bold = true }
+select_main = { fg = "#292e42", bg = "#9ece6a", bold = true }
 select_alt  = { fg = "#7aa2f7", bg = "#292e42" }
 
 # Unset mode
-unset_main = { fg = "#262626", bg = "#af87ff", bold = true }
+unset_main = { fg = "#292e42", bg = "#bb9af7", bold = true }
 unset_alt  = { fg = "#7aa2f7", bg = "#292e42" }
 
 # : }}}
 
-# : Status {{{
+
+# : Status bar {{{
 
 [status]
-overall = { fg = "#4e4e4e", bg = "#4e4e4e" }
+overall = { fg = "#7aa2f7" }
 sep_left  = { open = "", close = "" }
 sep_right = { open = "", close = "" }
 
+
 # Progress
-progress_label = { bold = true }
-progress_normal = { fg = "blue", bg = "black" }
-progress_error = { fg = "red", bg = "black" }
+progress_label = { fg = "#292e42", bold = true }
+progress_normal = { fg = "#7aa2f7", bg = "#292e42" }
+progress_error = { fg = "#f7768e", bg = "#292e42" }
 
 # Permissions
-perm_type = { fg = "#afd75f" }
-perm_read = { fg = "#d7af5f" }
-perm_write = { fg = "#ff8787" }
-perm_exec = { fg = "#87d7ff" }
-perm_sep = { fg = "#4e4e4e" }
+perm_sep   = { fg = "#7aa2f7" }
+perm_type  = { fg = "#9ece6a" }
+perm_read  = { fg = "#e0af68" }
+perm_write = { fg = "#f7768e" }
+perm_exec  = { fg = "#bb9af7" }
+
 
 # : }}}
 
-
-# : Select {{{
+# : Pick {{{
 
 [pick]
-border = { fg = "cyan" }
-active = { fg = "magenta", bold = true }
+border = { fg = "#7aa2f7" }
+active = { fg = "#bb9af7", bold = true }
 inactive = {}
 
 # : }}}
@@ -100,9 +94,9 @@ inactive = {}
 # : Input {{{
 
 [input]
-border = { fg = "cyan" }
-title = {}
-value = {}
+border   = { fg = "#7aa2f7" }
+title    = {}
+value    = {}
 selected = { reversed = true }
 
 # : }}}
@@ -111,14 +105,7 @@ selected = { reversed = true }
 # : Completion {{{
 
 [cmp]
-border = { fg = "cyan" }
-active = { bg = "darkgray" }
-inactive = {}
-
-# Icons
-icon_file = ""
-icon_folder = ""
-icon_command = ""
+border = { fg = "#7aa2f7" }
 
 # : }}}
 
@@ -126,9 +113,9 @@ icon_command = ""
 # : Tasks {{{
 
 [tasks]
-border = { fg = "cyan" }
-title = {}
-hovered = { underline = true }
+border  = { fg = "#7aa2f7" }
+title   = {}
+hovered = { fg = "#bb9af7", underline = true }
 
 # : }}}
 
@@ -136,15 +123,12 @@ hovered = { underline = true }
 # : Which {{{
 
 [which]
-mask = { bg = "#262626" }
-# cand            = { fg = "#87d7ff" }
-# rest            = { fg = "darkgray" }
-# desc            = { fg = "#af87ff" }
-cand = { fg = "lightcyan" }
-rest = { fg = "darkgray" }
-desc = { fg = "magenta" }
-separator = "  "
-separator_style = { fg = "darkgray", bold = true }
+mask            = { bg = "#414868" }
+cand            = { fg = "#9ece6a" }
+rest            = { fg = "#a9b1d6" }
+desc            = { fg = "#bb9af7" }
+separator       = "  "
+separator_style = { fg = "#626880" }
 
 # : }}}
 
@@ -152,29 +136,26 @@ separator_style = { fg = "darkgray", bold = true }
 # : Help {{{
 
 [help]
-on = { fg = "#af87ff" }
-run = { fg = "#87d7ff" }
-desc = { fg = "#afafd7" }
-hovered = { bg = "#4e4e4e", bold = true }
-footer = { fg = "#262626", bg = "white" }
+on      = { fg = "#9ece6a" }
+run     = { fg = "#bb9af7" }
+hovered = { reversed = true, bold = true }
+footer  = { fg = "#1a1b26", bg = "#a9b1d6" }
 
 # : }}}
+
 
 # : Notify {{{
 
 [notify]
-title_info = { fg = "green" }
-title_warn = { fg = "yellow" }
-title_error = { fg = "red" }
-
-# Icons
-icon_info = ""
-icon_warn = ""
-icon_error = ""
+title_info  = { fg = "#9ece6a" }
+title_warn  = { fg = "#f7768e" }
+title_error = { fg = "#e0af68" }
 
 # : }}}
-#
+
+
 # : File-specific styles {{{
+
 [filetype]
 
 rules = [
